@@ -1,5 +1,5 @@
 {
-  "name": "rd-json",
+  "name": "rp-json",
   "version": "2.5.0",
   "description": "Type-aware JSON serializer/parser",
   "main": "dist/cjs/index.js",
