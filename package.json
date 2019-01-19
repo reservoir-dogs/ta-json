@@ -1,5 +1,5 @@
 {
-  "name": "ta-json",
+  "name": "rd-json",
   "version": "2.5.0",
   "description": "Type-aware JSON serializer/parser",
   "main": "dist/cjs/index.js",
@@ -14,12 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/edcarroll/ta-json.git"
+    "url": "git+https://github.com/reservoir-dogs/ta-json.git"
   },
-  "author": "Edward Carroll",
+  "author": "Denis RUNGET",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/edcarroll/ta-json/issues"
+    "url": "https://github.com/reservoir-dogs/ta-json/issues"
   },
   "keywords": [
     "json",
@@ -32,7 +32,7 @@
     "serializer",
     "parser"
   ],
-  "homepage": "https://github.com/edcarroll/ta-json#readme",
+  "homepage": "https://github.com/reservoir-dogs/ta-json#readme",
   "dependencies": {
     "reflect-metadata": "^0.1.12"
   },
