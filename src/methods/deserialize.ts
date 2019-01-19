@@ -67,16 +67,19 @@ function deserializeObject(object:JsonValue, definition:PropertyDefinition, opti
     const primitive = definition.type === String || definition.type === Boolean || definition.type === Number;
     const value:any = object;
 
-    const converter = definition.converter || propertyConverters.get(definition.type);
-    if (converter) {
-        return converter.deserialize(value);
-    }
+    if(value != null)
+	{
+        const converter = definition.converter || propertyConverters.get(definition.type);
+        if (converter) {
+            return converter.deserialize(value);
+        }
 
-    if (!primitive) {
-        const objDefinition = objectDefinitions.get(definition.type);
+        if (!primitive) {
+            const objDefinition = objectDefinitions.get(definition.type);
 
-        if (objDefinition) {
-            return deserialize(value, definition.type);
+            if (objDefinition) {
+                return deserialize(value, definition.type);
+            }
         }
     }
 
