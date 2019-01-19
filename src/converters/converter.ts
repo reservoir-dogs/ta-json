@@ -9,8 +9,10 @@ export interface IPropertyConverter {
 
 export const propertyConverters:Map<Function, IPropertyConverter> = new Map<Function, IPropertyConverter>();
 
+const isNode = new Function("try {return this===global;}catch(e){return false;}");
+
 // Only import Buffer code if running in NodeJS
-if (typeof window === "undefined") {
+if (isNode) {
     propertyConverters.set(Buffer, new BufferConverter());
 }
 propertyConverters.set(Date, new DateConverter());
